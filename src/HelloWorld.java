@@ -78,6 +78,9 @@ public class HelloWorld {
     //14.
         byte i = 200;
         byte z = -111111111;
+        //Error past smaller or larger than the type it can hold.
+        //incompatible types: possible lossy conversion from int to byte
+
         //Integer.MAX_VALUE class constant
 
     }
