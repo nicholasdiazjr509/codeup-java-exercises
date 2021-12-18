@@ -15,6 +15,8 @@ public class java_practice {
 //                System.out.println(sc.nextInt());
 //                System.out.println(sc.nextInt());
 //                System.out.println(sc.nextInt());
+// I like to practice this!
+
 
 //   Task
 //In this challenge, you must read
