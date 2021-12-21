@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 public class java_practice {
     public static void main(String[] args) {
@@ -55,15 +56,20 @@ public class java_practice {
  Double: 3.1415
  Int: 42
  */
-        int i;
-        for(i = 3; i < 4; i++){
 
-        int a = stdin.nextInt();
-        double b = stdin.nextDouble();
-        String c = stdin.nextLine();
-        System.out.print(a);
-        System.out.print(b);
-        System.out.print(c);
 
+
+
+                int x = stdin.nextInt();
+                double y = stdin.nextDouble();
+                stdin.nextLine();
+                String s = stdin.nextLine();
+
+
+                System.out.println("String: "+s);
+                System.out.println("Double: "+y);
+                System.out.println("Int: "+x);
+            }
         }
-    }}
+
+
