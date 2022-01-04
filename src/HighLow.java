@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class HighLow {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        String playAgain = "";
+        String playAgain;
         int numOfGuesses = 0;
         Random rand = new Random();
         int num = rand.nextInt(101) +1;
@@ -26,7 +26,7 @@ public class HighLow {
             else if (playerGuess > num)
                 System.out.println("Your guess " + playerGuess + " is too HIGH. Try again.");
             else
-                System.out.println("You guessed correctly!! You guessed " + playerGuess + " which was correct. It took " + numOfGuesses + " tries to get the correct number.");
+                System.out.println("Good guess!! You guessed " + playerGuess + " which was correct. It took " + numOfGuesses + " tries to get the correct number.");
         }
         System.out.println("Would you like to play again? yes or no: ");
         playAgain = sc.next();

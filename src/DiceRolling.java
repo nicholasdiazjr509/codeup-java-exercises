@@ -1,45 +1,53 @@
-import java.util.*;
+import java.util.Random;
+import java.util.Scanner;
 
 public class DiceRolling {
 
-        public static int[] sumResult = {0,0,0,0,0,0,0,0,0,0,0,0};
-        public static int numOfRolls = 0;
-
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number of rolls of dice: ");
-        numOfRolls = sc.nextInt();
-        generateDiceRolling();
-
-    }
-    public static void generateDiceRolling(){
-        int firstDie = 0;
-        int secondDie = 0;
-        int sum = 0;
-    for(int i = 0; i < numOfRolls; i++){
-        Random rand = new Random();
-
-        firstDie = 1 + rand.nextInt((6-1) + 1);
-        secondDie = 1 + rand.nextInt((6-1) + 1);
-        sum = firstDie + secondDie;
-        sumResult[sum] = sumResult[sum] + 1;
-    }
-        printResult();
-    }
-    public static void printResult() {
-        double sumTotal = 0;
-        for (int j : sumResult){
-            sumTotal += j;
-        }
-        System.out.format("Number of rolls is %d \n", numOfRolls);
-        for(int k = 2; k <=12; k++){
-            System.out.format("Results: " + (sumResult[k]));
-        }
         System.out.println();
-    for (int k=2; k<=12; k++){
-        String stringOutput = "";
+        Scanner sc = new Scanner(System.in);
+        String choice = "y";
+
+       // choice Validator.getString(sc, "Roll the Dice? y or n:");
+
+        while(choice.equalsIgnoreCase("y")){
+        //    choice = getString("Would you like to roll again? y or n: ");
+        }
+    }
+
+    Random rand = new Random();{
+        int dieOne = 0;
+        int dieTwo = 0;
+        int total[] = new int[13];
+
+    for (int index = 0; index < total.length; index++){
+        total[index] = 0;
+        for(int roll = 1; roll <= 4; roll++){
+            dieOne = (int) (Math.random()* 6) + 1;
+            dieTwo = (int) (Math.random()* 6) + 1;
+            total[dieOne]++;
+            total[dieTwo]++;
+
+            System.out.println("Roll 1" + "\n " + dieOne + " " + "\n "+ dieTwo + " ");
+        if(total[dieOne + dieTwo] == 7)
+            System.out.println("Craps!" + "\n");
+
+        else if(total[dieOne + dieTwo] == 2)
+            System.out.println("Snake eyes!" + "\n");
+
+
+        }
 
     }
     }
-
-}
+//}
+//
+//
+//boolean confirm = true;
+//
+//while (confirm){
+//    System.out.println("How many sides?");
+//    int sides = sc.nextInt();
+//    rollDice = sc.nextInt();
+//    rollDice(side)
+        }
