@@ -3,19 +3,36 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner sc;
+    private Scanner sc = new Scanner(System.in);
+//    private Scanner sc;
+//
+//    public Input() {
+//        this.sc = new Scanner(System.in);
 
-    public Input() {
-        this.sc = new Scanner(System.in);
-    }
 
     public String getString() {
-        return sc.next();
+        System.out.println("Enter your input. ");
+        String userInput = sc.nextLine();
+        //return sc.next();
+        System.out.printf("You entered: %s", userInput);
+        return userInput;
     }
+    public String getString(String prompt){
+        System.out.println(prompt);
+        String userInput = sc.nextLine();
+        //return sc.next();
+        System.out.printf("You entered: %s", userInput);
+        return userInput;
 
+    }
     public boolean yesNo(String s) {
+        System.out.println("Continue?");
         String input = sc.next();
-        return (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
+        if (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes")) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public int getInt(int min, int max) {
@@ -29,13 +46,17 @@ public class Input {
     }
 
     public int getInt() {
-        if (sc.hasNextInt()) {
-            return sc.nextInt();
-        } else {
-            System.out.println("Try again!");
-            sc.nextLine();
-            return getInt();
-        }
+        System.out.println("Enter a number.");
+        int userNum = sc.nextInt();
+        System.out.printf("You entered %d", userNum);
+//        if (sc.hasNextInt()) {
+//            return sc.nextInt();
+//        } else {
+//            System.out.println("Try again!");
+//            sc.nextLine();
+//            return getInt();
+
+        return userNum;
     }
 
 
