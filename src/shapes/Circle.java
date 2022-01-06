@@ -22,10 +22,12 @@ public class Circle {
     }
     //Getter method for radius, aka Accessor
     public double getRadius() {
+
         return radius;
     }
     // method to calculate and return area
     public double getArea() {
+
         return PI * radius * radius;
     }
 

@@ -1,3 +1,5 @@
+package WarmUps;
+
 public class Penguin {
     private String name;
     private int weight;
@@ -8,6 +10,7 @@ public class Penguin {
     //public static methods
     //static vs instance method. a feature of the class itself.
     public static boolean canFly(){
+
         return false;
     }
     public static boolean areEvil(){
@@ -26,19 +29,20 @@ public class Penguin {
         this.sex = sex;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
     public int getWeight() {
-        return weight;
+            return weight;
     }
 
-    public String getSpecies() {
+    public String getSpecies(){
         return species;
     }
     public char getSex(){
         return sex;
-    }
+     }
 
     public void setName(String name) {
         this.name = name;//this keyword this instance of the class
@@ -46,26 +50,20 @@ public class Penguin {
     public void setWeight(int weight){
         this.weight= weight;
     }
-
     public void setSpecies(String species) {
+
         this.species = species;
     }
-
     public void setSex(char sex) {
-        this.sex = sex;
+           this.sex = sex;
     }
-    public Penguin(String name, int age, int weight, int heightInCM){
-        this.name = name;
-        this.weight = weight;
-        this.species = species ;
-        this.sex = sex;
-    }
+
 
 
 }
 
 //Warmup
-//Create a class named "Penguin"
+//Create a class named "WarmUps.Penguin"
 //Give your class the following private fields
 //Name
 //Weight
