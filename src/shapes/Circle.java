@@ -14,6 +14,13 @@ public class Circle {
     public double getCircumference(){
         return radius * 2 * Math.PI;
     }
+
+    public double getRadius() {
+        return radius;
+    }
+    public void setRadius(double radius){
+        this.radius = radius;
+    }
 }
 //    private final double PI = 3.14159;
 //    // radius of circle

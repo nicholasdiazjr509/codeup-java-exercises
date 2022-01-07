@@ -1,13 +1,14 @@
-import groovy.json.JsonOutput;
 
-import java.security.spec.PKCS8EncodedKeySpec;
-import java.util.Scanner;
 
 public class Person {
    private String name;
     private int age;
     private int weight;
     private int heightInCM;
+
+    public Person(String name){
+        this.name = name;
+    }
 
     //creating the constructor
     public Person(){  //no arguments

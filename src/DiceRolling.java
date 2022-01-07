@@ -18,7 +18,7 @@ public class DiceRolling {
     Random rand = new Random();{
         int dieOne = 0;
         int dieTwo = 0;
-        int total[] = new int[13];
+        int[] total = new int[13];
 
     for (int index = 0; index < total.length; index++){
         total[index] = 0;

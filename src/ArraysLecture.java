@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArraysLecture
 {
     public static void main(String[] args) {
@@ -29,6 +31,57 @@ public class ArraysLecture
         //for (let element of array){}
         for (String fruit : fruits) {
             System.out.println(fruit);
+
         }
+        System.out.println(fruits);
+        //THE ARRAYS CLASS
+        // how to access array
+
+        //Methods of array  Arrays.toString() - - returns a string with the elements in the array.
+        System.out.println(Arrays.toString(fruits));
+
+        //Arrays.fill() -- void, does not return anything, just does the thing.
+        String[] stickers = new String[6];
+        Arrays.fill(stickers, "(>^.^)><(^.^)");
+        System.out.println(Arrays.toString(stickers));
+
+        //Arrays.equals() - returns a boolean. Checks for both element values and length of the array.
+        String[] extraFruits = {"orange", "apple", "banana", "grapefruit", null};
+        System.out.println(Arrays.equals(fruits, extraFruits));
+
+        //Arrays.copyOf() = returns a copy of the array.
+        String[] fruitClones = Arrays.copyOf(extraFruits, 10);//dont forget the length
+        System.out.println(Arrays.toString(fruitClones));
+
+        // 2D ARRAYS
+
+        int[][] matrix = {
+                {1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}
+        };
+
+// access the first element in the second row
+        System.out.println(matrix[1][0]); // 4
+// the last element in the first row
+        System.out.println(matrix[0][2]); // 3
+// the first element in the last row
+        System.out.println(matrix[2][0]); // 7
+
+        for (int[] row : matrix) {
+            System.out.println("+---+---+---+");
+
+            System.out.print("| ");
+
+            for (int n : row) {
+                System.out.print(n + " | ");
+            }
+            System.out.println();
+        }
+
+        System.out.println("+---+---+---+");
+
+//        Circle[] circles = {new Circle(4), new Circle(5) };
+//        circles[1].
     }
 }
