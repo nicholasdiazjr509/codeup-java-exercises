@@ -1,3 +1,5 @@
+import shapes.Circle;
+
 import java.util.Arrays;
 
 public class ArraysLecture
@@ -80,8 +82,16 @@ public class ArraysLecture
         }
 
         System.out.println("+---+---+---+");
-
+//You can even create arrays of objects.
 //        Circle[] circles = {new Circle(4), new Circle(5) };
 //        circles[1].
+       // System.out.println(circle, );
+        // Last minute note.. You can even create arrays of objects!
+        Circle[] circles = {new Circle(4), new Circle(5)};
+
+        System.out.println(circles[0].getArea());
+
+
+
     }
 }

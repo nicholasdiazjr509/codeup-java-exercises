@@ -87,7 +87,7 @@ public class MoviesArray {
                 new Movie("Giant", "drama"),
                 new Movie("Platoon", "drama"),
                 new Movie("Fargo", "drama"),
-                new Movie("Duck Soup", "comedy"),
+                new Movie("BirdHaven.Duck Soup", "comedy"),
                 new Movie("Mutiny On The Bounty", "drama"),
                 new Movie("Frankenstein", "horror"),
                 new Movie("Easy Rider", "drama"),
