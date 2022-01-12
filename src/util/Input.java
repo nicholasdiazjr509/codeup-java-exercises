@@ -3,69 +3,87 @@ package util;
 import java.util.Scanner;
 
 public class Input {
-    private Scanner sc;
+    //private final Scanner sc = new Scanner(System.in);
 
-    public Input() {
-        this.sc = new Scanner(System.in);
-    }
+        private Scanner sc;
 
-    public String getString() {
-        return sc.next();
-    }
-
-    public boolean yesNo(String s) {
-        String input = sc.next();
-        return (input.equalsIgnoreCase("y") || input.equalsIgnoreCase("yes"));
-    }
-
-    public int getInt(int min, int max) {
-        int userInt = getInt();
-        if (userInt >= min && userInt <= max) {
-            return userInt;
-        } else {
-            System.out.println("Out of range dude. Enter a number between " + min + " and " + ".");
-            return getInt(min, max);
+        public Input() {
+            this.sc = new Scanner(System.in);
         }
-    }
 
-    public int getInt() {
-        if (sc.hasNextInt()) {
-            return sc.nextInt();
-        } else {
-            System.out.println("Try again!");
+        public String getString() {
+            return this.sc.nextLine();
+        }
+
+        public String getString(String prompt) {
+            System.out.println(prompt);
+            return getString();
+        }
+
+        public boolean yesNo() {
+            return yesNo("Please enter yes or no.");
+        }
+
+        public boolean yesNo(String prompt) {
+            System.out.println(prompt);
+            String input = this.sc.next();
             sc.nextLine();
-            return getInt();
+            return (input.trim().toLowerCase().equals("y") ||
+                    input.trim().toLowerCase().equals("yes"));
         }
-    }
 
+
+        public int getInt() {
+            System.out.println("Please enter an int.");
+            return this.sc.nextInt();
+        }
+
+        public int getInt(int min, int max) {
+            return getInt(min, max, "Please enter an int between " + min + " and " + max);
+
+        }
+
+        public int getInt(int min, int max, String prompt) {
+            int input;
+            do {
+                System.out.println(prompt);
+                input = this.sc.nextInt();
+            } while (input < min || input > max);
+
+            return input;
+        }
 
     public double getDouble(double min, double max) {
-        double userDouble = getDouble();
-        if (userDouble >= min && userDouble <= max) {
-            return userDouble;
-        } else {
-            System.out.println("Out of range dude! Enter a number between " + min + " and " + max + ".");
+        System.out.printf("Please enter a number between %f and %f. \n", min, max);
+        double userNum = sc.nextDouble();
+        if (userNum > max || userNum < min) {
             return getDouble(min, max);
         }
+        return userNum;
+    }
+
+    public double getDouble(String prompt, double min, double max) {
+        System.out.println(prompt);
+        double userNum = sc.nextDouble();
+        if (userNum > max || userNum < min) {
+            return getDouble(min, max);
+        }
+        return userNum;
     }
 
     public double getDouble() {
-        System.out.println("Enter a number dude: ");
-        try {
-            return Double.parseDouble(getString());
-            //use an exception??
+        System.out.println("Please enter a number.");
+        double userNum = sc.nextDouble();
+        System.out.printf("You chose: %f", userNum);
+        return userNum;
+    }
 
-        } catch (Exception e) {
-            System.out.println("You made an invalid entry. Enter a number dude: ");
-            return getDouble();
+    public double getDouble(String prompt) {
+        System.out.println(prompt);
+        double userNum = sc.nextDouble();
+        System.out.printf("You chose: %f", userNum);
+        return userNum;
         }
-    }
-
-    public void setMinMaxInt(int i, int i1) {
-    }
-
-    public void setMinMaxDouble(double i, double i1) {
-    }
 }
 //
 //    public static void main(String[] args) {
