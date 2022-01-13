@@ -34,7 +34,7 @@ public class Input {
 
 
         public int getInt() {
-            System.out.println("Please enter an int.");
+            System.out.println("Please enter a number.");
             return this.sc.nextInt();
         }
 

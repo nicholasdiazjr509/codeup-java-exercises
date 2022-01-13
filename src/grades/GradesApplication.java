@@ -15,7 +15,7 @@ public class GradesApplication {
         this.input = input;
     }
     public void init(){
-        System.out.println("Hello!");
+        System.out.println("Hello! This the Grades application.");
         runInteraction();
     }
     private void runInteraction(){

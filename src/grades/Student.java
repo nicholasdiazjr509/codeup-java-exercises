@@ -33,8 +33,7 @@ public class Student {
                 for(Double grade : this.grades) {
                     totalGrades += grade;
             }
-            double gradesAdded = totalGrades/this.grades.size();
-                return gradesAdded;
+            return totalGrades/ this.grades.size();
  }
 public static void main(String[] args) {
         Student bob = new Student("Bob");
