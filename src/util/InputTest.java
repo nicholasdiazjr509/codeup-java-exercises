@@ -1,6 +1,6 @@
-import util.Input;
+package util;
 
-public class InputTest{
+public class InputTest {
     public static void main(String[] args) {
 
         //instantiated

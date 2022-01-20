@@ -1,33 +1,41 @@
 package ContactsApp;
 
-class Contacts implements java.io.Serializable{
-    private String name;
-    private String number;
-    private String Name;
-    private String Phone;
+class Contacts{
+        private String name;
+        private String number;
 
-    public Contacts(String firstName, String name, String number) {
-        this.name = name;
-        this.number = number;
-    }
+        public Contacts(String name, String number) {
+            this.name = name;
+            this.number = number;
+        }
 
-    public String getName() {
-        return name;
-    }
+        public Contacts(String fileEntry) {
+            String[] data = fileEntry.split(" | ");
+            this.name = data[0];
+            this.number = data[data.length - 1];
+        }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+        public String getName() {
+            return this.name;
+        }
 
-    public String getNumber() {
-        return number;
-    }
+        public void setName(String name) {
+            this.name = name;
+        }
 
-    public void setNumber(String number) {
-        this.number = number;
-    }
+        public String getNumber() {
+            return this.number;
+        }
 
-    public void printInfo() {
-        System.out.println("Name:" + Name + ", Phone:" + Phone);
-    }
+        public void setNumber(String number) {
+            this.number = number;
+        }
+
+        public String toString() {
+            return "Name: " + this.name + ", Number: " + this.number;
+        }
+
+        public String toFileString() {
+            return this.name + " | " + this.number;
+        }
 }
