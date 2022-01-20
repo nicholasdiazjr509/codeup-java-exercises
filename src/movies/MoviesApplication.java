@@ -105,7 +105,7 @@ private String userPrompt(){
 }
 private int promptChoice(){
         Input in = new Input();
-        return in.getInt(0, 6, "Enter choice: ");
+        return in.getInt();
 }
 
 

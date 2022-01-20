@@ -3,6 +3,7 @@ package grades;
 import java.util.ArrayList;
 
 public class Student {
+
     private String name;
     private ArrayList <Double> grades;
 
@@ -33,8 +34,7 @@ public class Student {
                 for(Double grade : this.grades) {
                     totalGrades += grade;
             }
-            double gradesAdded = totalGrades/this.grades.size();
-                return gradesAdded;
+            return totalGrades/ this.grades.size();
  }
 public static void main(String[] args) {
         Student bob = new Student("Bob");
@@ -44,6 +44,10 @@ public static void main(String[] args) {
             bob.addGrade(91);
     System.out.println("Grades for " + bob.getName()+ ": " + bob.getGrades());
     System.out.println(bob.getName() + "'s Grade Avg. is: " + bob.getGradeAverage());
+
+//    abstract class Marker {
+//        public void write();
+//    }
 
     }
 }

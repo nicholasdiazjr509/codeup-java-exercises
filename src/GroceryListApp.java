@@ -8,7 +8,7 @@ public class GroceryListApp {
     private final int itemCost;
 
     public GroceryListApp(String items, String category, int itemCost){
-      this.items = items;
+        this.items = items;
         this.category = category;
         this.itemCost = itemCost;
 }
@@ -59,13 +59,13 @@ public class GroceryListApp {
         boolean createList = input.yesNo("Would you like to create a grocery list? ");
     if(createList){
         Scanner sc = new Scanner(System.in);
-        displayCategories();
+            displayCategories();
         String category = groceryCat();
         System.out.println("How many?");
-        int quantity = input.getInt();
+            int quantity = input.getInt();
         System.out.println("Name of item?");
         String groceryItem = sc.nextLine();
-        newList.add(new GroceryListApp(groceryItem, category, quantity));
+            newList.add(new GroceryListApp(groceryItem, category, quantity));
         for(GroceryListApp items : newList){
             System.out.printf("%s %s %s", items.getItemCost(), items.getCategory(), items.getItems());
             }

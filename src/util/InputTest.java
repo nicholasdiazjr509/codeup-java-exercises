@@ -1,6 +1,6 @@
-import util.Input;
+package util;
 
-public class InputTest{
+public class InputTest {
     public static void main(String[] args) {
 
         //instantiated
@@ -23,6 +23,9 @@ public class InputTest{
 //        System.out.println("Enter a number between 2.5 and 4.5");
 //        double userInt = input.getDouble(2.5, 4.5);
 //        System.out.println("You entered: " + userInt);
-        in.getString("Please enter your first and last name.");
+   //     in.getString("Please enter your first and last name.");
+    in.getInt();
+    in.getDouble();
+    in.convertHexToDecimal();
     }
 }
