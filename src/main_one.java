@@ -9,10 +9,10 @@ public class main_one{
         System.out.println("Enter the no. of students placed in CSE: ");
         int cse = sc.nextInt();
 
-        System.out.println("Enthe the no. of students placed in ECE: ");
+        System.out.println("Enter the no. of students placed in ECE: ");
         int ece = sc.nextInt();
 
-        System.out.println("Ent4er the no. of students placed in Mech: ");
+        System.out.println("Enter the no. of students placed in Mech: ");
         int mech = sc.nextInt();
 
         sc.close();
